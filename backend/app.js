@@ -5,7 +5,11 @@ const contact = require("./routes/contact");
 
 require("./conn/conn");
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:["https://lookscout-9krn.vercel.app/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 
 app.use("/api/v1", contact);
 app.listen("1000", () => {

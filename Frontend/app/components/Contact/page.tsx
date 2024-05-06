@@ -36,7 +36,7 @@ export default function Team() {
       alert("All fields are required");
      }
      else{
-      await axios.post("http://localhost:1000/api/v1/post",Values).then((res) => {
+      await axios.post("https://lookscout-iota.vercel.app/api/v1/post",Values).then((res) => {
         alert(res.data.message);
       });
       setValues(
